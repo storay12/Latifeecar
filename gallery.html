@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Gallery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="gallery-page">
+
+<header>
+<h2>موترهای کرایی لطیفی | Latifi Car Rental</h2>
+<nav id="nav">
+<a href="index.html">خانه | Home</a>
+<a href="services.html">خدمات | Services</a>
+<a href="gallery.html" class="active">گالری | Gallery</a>
+<a href="contact.html">تماس | Contact</a>
+</nav>
+<div class="menu" onclick="toggleMenu()">☰</div>
+</header>
+
+<section class="page">
+<h2>گالری تصاویر و ویدیوها | Gallery</h2>
+
+
+<div class="toggle-buttons">
+<button onclick="showImages()">تصاویر | Pictures</button>
+<button onclick="showVideos()">ویدیوها | Videos</button>
+</div>
+
+
+<div id="image-gallery">
+<img src="images/img.jpg">
+<img src="images/img2.jpg">
+<img src="images/img3.jpg">
+<img src="images/img4.jpg">
+<img src="images/img5.jpg">
+<img src="images/img6.jpg">
+<img src="images/img7.jpg">
+<img src="images/img8.jpg">
+</div>
+
+
+<div id="video-gallery" style="display:none;">
+<video controls muted>
+  <source src="videos/VID_20260202_0706_718.mp4" type="video/mp4">
+</video>
+
+<video controls muted>
+  <source src="videos/VID_20260202_0711_055.mp4" type="video/mp4">
+</video>
+
+<video controls muted>
+  <source src="videos/VID_20260202_0815_516.mp4" type="video/mp4">
+</video>
+
+<video controls muted>
+  <source src="videos/VID_20260202_0844_799.mp4" type="video/mp4">
+</video>
+</div>
+
+</section>
+
+<footer>
+© 2026 Latifi
+</footer>
+
+<script>
+function toggleMenu(){
+    document.getElementById("nav").classList.toggle("show");
+}
+function showImages(){
+    document.getElementById("image-gallery").style.display = "flex";
+    document.getElementById("video-gallery").style.display = "none";
+}
+function showVideos(){
+    document.getElementById("image-gallery").style.display = "none";
+    document.getElementById("video-gallery").style.display = "flex";
+}
+</script>
+
+</body>
+</html>
